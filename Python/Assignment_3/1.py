@@ -127,4 +127,102 @@
 # print(f"concatenated string: {result}")
 
 
-# 11. write a code to 
+# 11. write a code to remove all occurrences of  a specific element from a list.
+
+# def remove_occurrences(lst,element):
+#     return [item for item in lst if item != element]
+    
+# # Example using    
+# my_list = [1,2,3,4,2,5,2,6]
+# element_to_remove = 2
+# updated_list = remove_occurrences(my_list,element_to_remove)
+# print(updated_list)
+
+#12. Implement a code to find the second largest number in a given list of integers.
+
+# list = [55,1,45,68,159,75,5,159]
+
+# def find_second_maximum(list1):
+#     first_max = max(list[0],list1[1])
+#     second_max = min(list1[0],list1[1])
+    
+#     for i in range(2, len(list1)):
+#         if list1[i] > first_max:
+#             second_max = first_max
+#             first_max = list1[i]
+        
+#         elif list1[i] > second_max and first_max != list1[i]:
+#             second_max = list1[i]
+#     return second_max
+
+# print("second maximum number is ", find_second_maximum(list))
+    
+    
+#13. create a code to count the occurrence of each element in a list and return a dictionary with elements as keys and their counts as values.
+
+# def count_occurrences(lst):
+#     count_dist = {}
+#     for item in lst:
+#         if item in count_dist: 
+#             count_dist[item] += 1
+#         else:
+#             count_dist[item] = 1
+#     return count_dist
+
+# my_list = [1,2,2,3,4,4,4,5,5]
+# occurrence_dist = count_occurrences(my_list)
+# print(occurrence_dist)
+
+#write a code to reverse a list in place without using any built-in reverse functions.
+
+
+# def reverse_list(lst):
+#     left = 0
+#     right = len(lst) - 1
+    
+#     while left < right:
+#         lst[left], lst[right] = lst[right], lst[left]
+        
+#         left += 1
+#         right -= 1
+
+# my_list = [1,2,3,4,5]
+# reverse_list(my_list)
+# print(my_list)
+        
+
+#15. implement a code to find and remove duplicates from a list while preserving the original order of elements.
+
+# def remove_duplicates(lst):
+#     seen = set()
+#     result = []
+    
+#     for item in lst:
+#         if item not in seen:
+#             result.append(item)
+#             seen.add(item)
+            
+#     return result
+
+
+
+# my_list = [1,2,2,3,4,4,5,1,6]
+# unique_list = remove_duplicates(my_list)
+
+# print(unique_list)
+
+#16. create a code to check if a give list is sorted (either in ascending order) or not.
+
+def is_sorted(lst):
+    for i in range(len(lst) - 1):
+        if lst[i] > lst[i + 1]:
+            return False
+        return True 
+
+my_list = [1,2,3,4,5]
+print(is_sorted(my_list))
+
+my_list2 = [5,3,2,4]
+print(is_sorted(my_list2))
+
+#17. write a code to merge two sorted lists into a single list
